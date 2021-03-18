@@ -5,12 +5,15 @@
         <title></title>
     </head>
     <body>
-        dao
         <?php
             require_once 'config.php';
-            $sql = new Sql();
+            /*$sql = new Sql();
             $usuarios = $sql->select("SELECT * FROM usuarios");
-            echo json_encode($usuarios);
+            echo json_encode($usuarios);*/
+            
+            $user = new Usuario();
+            $user->loadById(6);
+            echo $user;
         ?>
     </body>
 </html>
